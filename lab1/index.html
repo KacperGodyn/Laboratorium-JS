@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamiczne Pola Tekstowe</title>
 </head>
 <body>
-    <div class="container-text">
+    <div class="container-text" id="inputContainer">
         <input type="text" id="numberOne" placeholder="Pierwsza liczba" ><br><br>
         <input type="text" id="numberTwo" placeholder="Druga liczba" ><br><br>
         <input type="text" id="numberThree" placeholder="Trzecia liczba" ><br><br>
-        <input type="text" id="numberFour" placeholder="Czwarta liczba" ><br><br>
-        <button type="submit" id="Calculate">Oblicz</button><br><br><br>
-        <h3>Suma: </h3>
-        <h4 id="sum"></h4>
-        <h3>Średnia: </h3>
-        <h4 id="average"></h4>
-        <h3>Min: </h3>
-        <h4 id="min"></h4>
-        <h3>Max: </h3>
-        <h4 id="max"></h4>
-
     </div>
-    <script src="script.js" />
+    <button id="addInput">Dodaj pole</button>
+    <button id="removeInput">Usuń ostatnie pole</button>
+    <button type="submit" id="Calculate">Wykonaj</button><br><br><br>
+    <h3>Suma: </h3>
+    <h4 id="sum"></h4>
+    <h3>Średnia: </h3>
+    <h4 id="average"></h4>
+    <h3>Min: </h3>
+    <h4 id="min"></h4>
+    <h3>Max: </h3>
+    <h4 id="max"></h4>
+
+    <script src="script.js"></script>
 </body>
 </html>
