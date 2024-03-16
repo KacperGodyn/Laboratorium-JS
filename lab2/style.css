@@ -1,0 +1,63 @@
+body{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+}
+
+.slider {
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+.box {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 5400px; /* Szerokość całego kontenera z obrazami */
+    height: 100%;
+}
+.box img {
+    width: 900px;
+    height: 600px;
+    object-fit: cover;
+}
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.controls button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background: rgb(0, 0, 0, 0.6);
+    color: lightgray;
+    border: none;
+    cursor: pointer;
+}
+.controls button.active {
+    background: rgb(61, 61, 61);
+}
+
+.arrows {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.arrows button {
+    font-size: 26px;
+    width: 55px;
+    height: 55px;
+    margin: 0px 380px;
+    padding: 10px 10px;
+    border-radius: 30px;
+    background: rgb(0, 0, 0, 0.3);
+    
+    color: lightgray;
+    border: none;
+    cursor: pointer;
+}
+.arrows button.active {
+    background: gray;
+}
