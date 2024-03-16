@@ -2,7 +2,6 @@ const box = document.querySelector('.box')
 const controls = document.querySelectorAll('.control')
 const prevButton = document.querySelector('.prev')
 const nextButton = document.querySelector('.next')
-const isOn = document.querySelector('isOn')
 
 let position = 0
 let intervalId
@@ -31,7 +30,14 @@ const goToSlide = (index) => {
 controls.forEach((control, index) => {
     control.addEventListener('click', () => {
         goToSlide(index)
-        intervalId = setInterval(autoSlide, 3000)
+        intervalId = setInterval(() => {
+            if (position === 5) {
+                position = 0
+            } else {
+                position++
+            }
+            updateSlider()
+        }, 3000)
     })
 })
 
@@ -55,7 +61,7 @@ nextButton.addEventListener('click', () => {
     updateSlider()
 });
 
-setInterval(() => {
+intervalId = setInterval(() => {
     if (position === 5) {
         position = 0
     } else {
