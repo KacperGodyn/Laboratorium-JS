@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div id="noteForm">
+      <input type="text" id="noteTitle" placeholder="Tytuł">
+      <textarea id="noteContent" placeholder="Treść"></textarea>
+      <input type="color" id="noteColor" value="#ffffff">
+      <label>
+        <input type="checkbox" id="notePin"> Przypnij
+      </label>
+      <input type="text" id="noteTags" placeholder="Tagi (oddzielone przecinkami)">
+      <input type="datetime-local" id="noteReminder">
+      <button onclick="addNote()">Dodaj notatkę</button>
+    </div>
+    <input type="text" id="searchQuery" placeholder="Szukaj notatek" oninput="searchNotes()">
+    <hr>
+    <div id="noteList">
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
