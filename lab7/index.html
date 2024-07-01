@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="controls">
+        <label for="ballCount">Balls: </label>
+        <input type="range" id="ballCount" value="20" min="1" max="200">
+        <span id="ballCountValue">20</span>
+        <label for="maxDistance">Max Distance: </label>
+        <input type="number" id="maxDistance" value="20" min="1" max="100">
+        <label for="forceStrength">Force Strength: </label>
+        <input type="range" id="forceStrength" value="1" min="-50" max="50" step="2">
+        <span id="forceStrengthValue">1</span>
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
