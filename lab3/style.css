@@ -1,12 +1,148 @@
-.channelone {
-    width: 60px;
-    height: 60px;
-    font-size: 52px;
-    color: red;
-    border: 0;
-    background-color: black;
-    border-radius: 20px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
 }
-.channelone:hover {
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.channels {
+    margin-bottom: 20px;
+}
+
+.channel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.channel-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
     cursor: pointer;
+    position: relative;
+}
+
+.channel-btn.recording {
+    background-color: red;
+    color: white;
+}
+
+.play-icon {
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    padding: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-channel-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.metronome {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.metronome label {
+    margin-right: 10px;
+}
+
+.sounds {
+    display: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.play-all-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

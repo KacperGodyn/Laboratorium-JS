@@ -3,21 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Drumkit</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio src="./sounds/clap.wav" controls data-key="z" id="s1"></audio>
-    <audio src="./sounds/kick.wav" controls data-key="x" id="s2"></audio>
-    <audio src="./sounds/hihat.wav" controls data-key="c" id="s3"></audio>
     <div class="container">
-        <div class="channels">
-            <button id='recordChannelOne' class="channelone">
-                O
-            </button>
+        <div class="channels" id="channels">
+            <div class="channel">
+                <button class="channel-btn">Ch1 <span class="play-icon">▶️</span></button>
+                <button class="delete-btn">🗑️</button>
+            </div>
+            <div class="channel">
+                <button class="channel-btn">Ch2 <span class="play-icon">▶️</span></button>
+                <button class="delete-btn">🗑️</button>
+            </div>
+            <div class="channel">
+                <button class="channel-btn">Ch3 <span class="play-icon">▶️</span></button>
+                <button class="delete-btn">🗑️</button>
+            </div>
+            <div class="channel">
+                <button class="channel-btn">Ch4 <span class="play-icon">▶️</span></button>
+                <button class="delete-btn">🗑️</button>
+            </div>
+        </div>
+        <button id="addChannel" class="add-channel-btn">➕ Dodaj kanał</button>
+        <button id="playAllChannels" class="play-all-btn">Odtwórz wszystkie kanały</button>
+        <div class="metronome">
+            <label class="switch">
+                <input type="checkbox" id="metronomeToggle">
+                <span class="slider round"></span>
+            </label>
+            <label for="bpm">BPM:</label>
+            <input type="number" id="bpm" value="120" min="60" max="200">
+        </div>
+        <div class="sounds">
+            <audio src="./sounds/clap.wav" data-key="z" id="s1"></audio>
+            <audio src="./sounds/kick.wav" data-key="x" id="s2"></audio>
+            <audio src="./sounds/hihat.wav" data-key="c" id="s3"></audio>
+            <audio src="./sounds/boom.wav" data-key="v" id="s4"></audio>
+            <audio src="./sounds/openhat.wav" data-key="b" id="s5"></audio>
+            <audio src="./sounds/ride.wav" data-key="n" id="s6"></audio>
+            <audio src="./sounds/snare.wav" data-key="m" id="s7"></audio>
+            <audio src="./sounds/tom.wav" data-key="a" id="s8"></audio>
+            <audio src="./sounds/tink.wav" data-key="s" id="s9"></audio>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
